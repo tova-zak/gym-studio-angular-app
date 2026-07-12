@@ -1,6 +1,22 @@
-﻿.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common'; 
+import { DataService } from '../../services/data.service';
+import { LessonDetailsComponent } from '../lesson-details/lesson-details.component'; 
+
+@Component({
+  selector: 'app-lessons-list',
+  standalone: true,
+  // כאן הקסם קורה: חייבים להוסיף את מה שמשתמשים ב-HTML למערך ה-imports
+  imports: [CommonModule, LessonDetailsComponent], 
+  templateUrl: './lessons-list.component.html',
+  styleUrls: ['./lessons-list.component.css']
+})
+export class LessonsListComponent implements OnInit {
+  lessons: any[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.lessons = this.dataService.getLessons();
+  }
 }

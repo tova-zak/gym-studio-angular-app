@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // נדרש בשביל ngFor
-import { LessonsService } from '../../services/lessons.service';
+import { DataService } from '../../services/data.service';
 import { LessonDetailsComponent } from '../lesson-details/lesson-details.component'; // ייבוא הקומפוננטה הבן
 
 @Component({
@@ -13,10 +13,9 @@ import { LessonDetailsComponent } from '../lesson-details/lesson-details.compone
 export class LessonsListComponent implements OnInit {
   lessons: any[] = [];
 
-  constructor(private lessonsService: LessonsService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    // `lessons` is a signal in LessonsService, call it to get the current value
-    this.lessons = this.lessonsService.lessons();
+    this.lessons = this.dataService.getLessons();
   }
 }

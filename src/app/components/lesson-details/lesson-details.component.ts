@@ -6,14 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './lesson-details.component.html',
-  styleUrls: ['./lesson-details.component.css']
+  styleUrl: './lesson-details.component.css'
 })
 export class LessonDetailsComponent {
-  @Input() lesson: any; 
-  
-  isStarted(): boolean {
-    if (!this.lesson || !this.lesson.startDate) return false;
-    const start = new Date(this.lesson.startDate).getTime();
-    return start <= Date.now();
-  }
+  @Input() lesson: any; // זו השורה שחסרה לך - היא מאפשרת להעביר את הנתונים
 }
