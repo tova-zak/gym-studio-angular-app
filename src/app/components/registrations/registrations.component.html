@@ -1,1 +1,14 @@
-<p>registrations works!</p>
+<div class="registrations-container" style="padding: 20px;">
+  <h2>רשימת נרשמות</h2>
+  
+  <!-- הטבלה מוצגת כאן -->
+  <div class="ag-theme-alpine" style="height: 500px; width: 100%;">
+    <ag-grid-angular
+      style="width: 100%; height: 100%;"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      [enableRtl]="true"
+      [pagination]="true">
+    </ag-grid-angular>
+  </div>
+</div>
