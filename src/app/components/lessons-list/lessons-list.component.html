@@ -1,3 +1,8 @@
+<div class="actions-row">
+  <button type="button" class="nav-button" (click)="goHome()">חזרה לדף הבית</button>
+  <button type="button" class="nav-button" (click)="goToLessonsTable()">לטבלת השעורים</button>
+</div>
+
 <div class="gallery">
   <app-lesson-details *ngFor="let lesson of lessons" [lesson]="lesson">
   </app-lesson-details>

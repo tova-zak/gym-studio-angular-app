@@ -1,14 +1,21 @@
 <div class="registrations-container" style="padding: 20px;">
   <h2>רשימת נרשמות</h2>
-  
+  <div class="actions-row">
+    <button type="button" class="global-clear-button" (click)="clearAllFilters()">נקה את כל הסינונים</button>
+    <button type="button" class="home-button" (click)="goHome()">חזרה לדף הבית</button>
+  </div>
+
   <!-- הטבלה מוצגת כאן -->
   <div class="ag-theme-alpine" style="height: 500px; width: 100%;">
     <ag-grid-angular
       style="width: 100%; height: 100%;"
       [rowData]="rowData"
       [columnDefs]="colDefs"
+      [components]="components"
       [enableRtl]="true"
-      [pagination]="true">
+      [pagination]="true"
+      [headerHeight]="90"
+      (gridReady)="onGridReady($event)">
     </ag-grid-angular>
   </div>
 </div>

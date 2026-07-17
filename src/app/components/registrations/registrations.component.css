@@ -6,3 +6,29 @@
 h2 {
   color: #333;
 }
+
+.actions-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.global-clear-button,
+.home-button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.global-clear-button:hover,
+.home-button:hover {
+  background: #eee;
+}
+
+.global-clear-button:hover {
+  background: #eee;
+}
