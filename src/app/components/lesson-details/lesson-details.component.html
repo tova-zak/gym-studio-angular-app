@@ -1,8 +1,17 @@
 <article class="lesson-card" [class.started]="isStarted()">
-	<h3>{{ lesson.name }}</h3>
-	<p><strong>Teacher:</strong> {{ lesson.teacherName || lesson.teacher }}</p>
-	<p><strong>Sessions:</strong> {{ lesson.sessionsCount || lesson.sessions }}</p>
-	<p><strong>When:</strong> {{ lesson.day }}, {{ lesson.time }}</p>
-	<p><strong>Start:</strong> {{ lesson.startDate | date:'mediumDate' }}</p>
-	<p><strong>Price:</strong> {{ lesson.price }}₪</p>
+	<div class="card-top">
+		<h3>{{ lesson.name }}</h3>
+		<span *ngIf="isStarted()" class="started-badge">התחיל</span>
+	</div>
+	<p><strong>מורה:</strong> <span class="field-value">{{ lesson.teacherName || lesson.teacher || '-' }}</span></p>
+	<p><strong>מפגשים:</strong> <span class="field-value">{{ lesson.sessionsCount || lesson.sessions || '-' }}</span>
+	</p>
+	<p><strong>מתי:</strong> <span class="field-value">{{ lesson.day || '-' }}, {{ lesson.time || '-' }}</span></p>
+	<!-- <p><strong>התחלה:</strong> <span class="field-value">{{ lesson.startDate ? (lesson.startDate | date:'d בMMMM y':'':'he-IL') : '-' }}</span></p> -->
+	<p><strong>התחלה:</strong>
+		<span class="field-value">
+			{{ lesson.startDate | date:'shortDate' }}
+		</span>
+	</p>
+	<p><strong>מחיר:</strong> <span class="field-value">{{ lesson.price ? (lesson.price + '₪') : '-' }}</span></p>
 </article>

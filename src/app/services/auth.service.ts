@@ -7,6 +7,7 @@ export class AuthService {
 
   private users = [
     { username: 'teacher1', password: '123', role: 'teacher' },
+    { username: 'shemtov', password: '789', role: 'teacher' },
     { username: 'sec1', password: '456', role: 'secretary' }
   ];
 

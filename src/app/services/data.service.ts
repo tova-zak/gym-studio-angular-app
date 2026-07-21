@@ -7,8 +7,8 @@ import { Registration } from '../models/registration.model';
 export class DataService {
   // Mock data for the lessons
   private lessons = [
-    { id: 1, name: 'Yoga', teacher: 'Sarah', sessions: 10, startDate: '2026-07-01', price: 500, day: 'Sunday', time: '09:00' },
-    { id: 2, name: 'Pilates', teacher: 'Rivki', sessions: 8, startDate: '2026-06-01', price: 400, day: 'Monday', time: '17:00' }
+    { id: 1, name: 'יוגה', teacher: 'שרה', sessions: 10, startDate: '2026-07-01', price: 500, day: 'ראשון', time: '09:00' },
+    { id: 2, name: 'פילאטיס', teacher: 'רבקה', sessions: 8, startDate: '2026-06-01', price: 400, day: 'שני', time: '17:00' }
   ];
 
   private registrations: Registration[] = [

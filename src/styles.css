@@ -4,3 +4,26 @@
 @import 'ag-grid-community/styles/ag-grid.css';
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
 
+/* Global unpaid row highlight for AG Grid */
+.ag-theme-alpine .ag-row.row-unpaid {
+  background-color: rgba(255, 205, 210, 0.95) !important;
+  border-left: 6px solid #c62828 !important;
+  box-shadow: inset 0 0 0 1px rgba(198, 40, 40, 0.18) !important;
+}
+
+.ag-theme-alpine .ag-row.row-unpaid .ag-cell {
+  color: #b71c1c !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  background-color: rgba(255, 235, 238, 0.92) !important;
+}
+
+.ag-theme-alpine .ag-row.row-unpaid .ag-cell[col-id="isPaid"] {
+  background-color: rgba(244, 67, 54, 0.16) !important;
+}
+
+.ag-theme-alpine .ag-row.row-unpaid .ag-cell:first-child {
+  font-weight: normal !important;
+}
+
